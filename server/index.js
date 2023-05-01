@@ -73,6 +73,6 @@ app.use('/api/warranty-category', warrantyCategoryRouter);
 app.use('/api/warranty-pursuit', warrantyPursuitRouter);
 app.use('/api/warranty', warrantyRouter);
 
-const PORT = 6001;
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(process.env.PORT, () =>
+  console.log(`Server started on port ${process.env.PORT}`),
+);
